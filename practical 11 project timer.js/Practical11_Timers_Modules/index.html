@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timers, Dynamic UI & Modular Design</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: white;
+      transition: background 0.2s ease;
+    }
+    h1 {
+      margin-bottom: 8px;
+    }
+    #sessions {
+      display: flex;
+      flex-direction: column;
+    }
+    .session {
+      border: 1px solid #ccc;
+      margin: 6px 0;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .session .time {
+      font-weight: bold;
+    }
+    .active {
+      background: #dff0d8; /* light green */
+      border-color: #8fd08f;
+    }
+    #countdown {
+      font-size: 1.2rem;
+      margin-top: 12px;
+    }
+    .countdown-warning {
+      color: red;
+      font-weight: bold;
+    }
+    button#addSession {
+      margin-top: 12px;
+      padding: 8px 12px;
+      font-size: 1rem;
+    }
+    @media (max-width: 500px) {
+      body { font-size: 14px; }
+    }
+    @media (max-width: 600px) {
+      body { background: lightblue; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Class Scheduler (with Timers & Modules)</h1>
+  <div id="sessions">
+    <div class="session" data-time="09:00">
+      <span class="title">Mathematics</span>
+      <span class="time">09:00</span>
+    </div>
+    <div class="session" data-time="10:00">
+      <span class="title">English</span>
+      <span class="time">10:00</span>
+    </div>
+    <div class="session" data-time="11:00">
+      <span class="title">Physics</span>
+      <span class="time">11:00</span>
+    </div>
+  </div>
+
+  <p id="countdown">Loading timer...</p>
+  <button id="addSession">Add Session</button>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
