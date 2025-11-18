@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Directory Manager</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- For jQuery -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Employee Directory Manager</h1>
+
+  <h3>Filter by Department:</h3>
+  <select id="deptFilter">
+    <option value="all">All Departments</option> <!-- Default option -->
+  </select>
+
+  <h2>Loaded with Fetch API</h2>
+  <div id="fetchTable"></div> <!-- Dynamic table container -->
+
+  <h2>Loaded with jQuery $.getJSON()</h2>
+  <div id="jqueryTable"></div> <!-- Dynamic table container -->
+
+  <script src="script2.js"></script>
+</body>
+</html>
